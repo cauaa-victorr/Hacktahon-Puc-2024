@@ -1,0 +1,182 @@
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Eco Alerta</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&amp;display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+</head>
+
+<body class="index-page" data-aos-easing="ease-in-out" data-aos-duration="600" data-aos-delay="0">
+
+  <header id="header" class="header d-flex align-items-center sticky-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center">
+
+      <a href="index.html" class="logo d-flex align-items-center me-auto">
+        <h1 class="sitename">Eco Alerta</h1>
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="#hero" class="active">Selecione</a></li>
+          <li class="dropdown"><a href="about.html"><span>Biomas</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="#">Amazônia</a></li>
+              <li><a href="#">Cerrado</a></li>
+            </ul>
+          </li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+      <a class="btn-getstarted" href="#" onclick="lerPrevisao()">Previsão Regional</a>
+    </div>
+  </header>
+
+  <main class="main">
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero section dark-background">
+
+      <div id="hero-carousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="5000">
+
+        <div class="carousel-item active">
+          <img src="assets/img/hero-carousel/hero-carousel-1.png" alt="">
+          <div class="carousel-container">
+            <h2>CERRADO<br></h2>
+            <div id="text-cerrado">
+              <p>Localização: Centro-Oeste do Brasil, além de partes do Sudeste, Nordeste e Norte.</p>
+              <p>Características: É o segundo maior bioma do país, ocupando cerca de 22% do território. Com clima tropical sazonal, possui uma estação chuvosa e outra seca. O Cerrado é uma savana brasileira, com vegetação de gramíneas, arbustos e árvores retorcidas.</p>
+              <p>Fauna e Flora: Abriga espécies como o lobo-guará, o tamanduá-bandeira e o tatu-canastra, além de árvores como o pequizeiro e o ipê. Importância: Conhecido como a “caixa d’água” do Brasil, o Cerrado é responsável pela nascente de várias bacias hidrográficas importantes.</p>
+            </div>
+            <a href="#featured-services" class="btn-get-started" onclick="lerTexto('text-cerrado')">Sobre o Bioma</a>
+              <a href="#featured-services" class="btn-get-started" onclick="lerTexto('text-amazonia')">Previsão do Tempo</a>
+          </div>
+        </div><!-- End Carousel Item -->
+
+        <div class="carousel-item">
+          <img src="assets/img/hero-carousel/hero-carousel-2.webp" alt="">
+          <div class="carousel-container">
+            <h2>AMAZÔNIA<br></h2>
+            <div id="text-amazonia">
+              <p>Localização: Norte do Brasil.</p>
+              <p>Características: Maior bioma do país e do mundo, cobre cerca de 49% do território brasileiro. Clima quente e úmido, com chuvas abundantes. A floresta Amazônica é uma floresta tropical densa, rica em biodiversidade.</p>
+              <p>Fauna e Flora: Abriga uma enorme variedade de espécies, incluindo onças, macacos, preguiças, botos, papagaios, além de árvores como castanheiras, seringueiras e palmeiras.</p>
+              <p>Importância: Considerada o "pulmão do mundo", tem um papel fundamental na regulação climática global e é uma das maiores reservas de biodiversidade do planeta.</p>
+            </div>
+            <a href="#featured-services" class="btn-get-started" onclick="lerTexto('text-amazonia')">Sobre o Bioma</a>
+            <a href="#featured-services" class="btn-get-started" onclick="lerTexto('text-amazonia')">Previsão do Tempo</a>
+          </div>
+        </div><!-- End Carousel Item -->
+
+        <a class="carousel-control-prev" href="#hero-carousel" role="button" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon bi bi-chevron-left" aria-hidden="true"></span>
+        </a>
+
+        <a class="carousel-control-next" href="#hero-carousel" role="button" data-bs-slide="next">
+          <span class="carousel-control-next-icon bi bi-chevron-right" aria-hidden="true"></span>
+        </a>
+
+        <ol class="carousel-indicators"><li data-bs-target="#hero-carousel" data-bs-slide-to="0" class="active" aria-current="true"></li><li data-bs-target="#hero-carousel" data-bs-slide-to="1" class=""></li></ol>
+      </div>
+
+    </section><!-- /Hero Section -->
+
+  </main>
+
+   <!-- Texto da previsão do tempo escondido -->
+  <div id="previsao-text" style="display: none;">
+    A previsão do tempo para Goiânia, Goiás, esta semana é de chuva passageira durante o dia e muitas nuvens à noite.
+  </div>
+
+  <footer id="footer" class="footer dark-background">
+    <div class="container copyright text-center mt-4">
+      <p>© <span>Eco Alerta</span> <span>Todos os direitos reservados.</span></p>
+    </div>
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+  <script>
+    // Função para ler o texto com base no ID
+    function lerTexto(id) {
+      var texto = document.getElementById(id).innerText;
+      var fala = new SpeechSynthesisUtterance(texto);
+      fala.lang = "pt-BR";
+      fala.volume = 1;
+      fala.rate = 1;
+      fala.pitch = 1;
+      window.speechSynthesis.speak(fala);
+    }
+  </script>
+
+  <!-- Função para ler o texto escondido -->
+  <script>
+    function lerPrevisao() {
+      // Pegue o texto escondido
+      var texto = document.getElementById("previsao-text").innerText;
+
+      // Crie uma instância do objeto SpeechSynthesisUtterance
+      var fala = new SpeechSynthesisUtterance(texto);
+
+      // Defina o idioma da fala (Português do Brasil)
+      fala.lang = "pt-BR";
+
+      // Ajuste o volume (0 a 1), velocidade (1 é o padrão), e tom (1 é o padrão)
+      fala.volume = 1;   // Volume máximo
+      fala.rate = 1;     // Velocidade normal
+      fala.pitch = 1;    // Tom normal
+
+      // Use a API SpeechSynthesis para falar o texto
+      window.speechSynthesis.speak(fala);
+    }
+  <script>
+    // Função para ler o texto com base no ID
+    function lerTexto(id) {
+      var texto = document.getElementById(id).innerText;
+      var fala = new SpeechSynthesisUtterance(texto);
+      fala.lang = "pt-BR";
+      fala.volume = 1;
+      fala.rate = 1;
+      fala.pitch = 1;
+      window.speechSynthesis.speak(fala);
+    }
+  </script></script>
+
+
+
+
+
+</body></html>
